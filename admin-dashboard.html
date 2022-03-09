@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Bootstrap Links-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- <link
+      href="assets/css/prismjs.bundle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/plugins.bundle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="assets/css/style.bundle.css" />-->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css"
+    />
+
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/jquery-confirm.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="assets/js/plugins.bundle.js"></script>
+    <script src="assets/js/scripts.bundle.js"></script>
+    <script src="assets/js/prismjs.bundle.js"></script> -->
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/admin.js"></script>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="admin_dashboard_main">
+      <div class="dash_header">
+        <ul>
+          <li class="active"><a href="#">CUSTOMIZATION</a></li>
+          <li><a href="admin-consol-customization.html">SETTINGS</a></li>
+        </ul>
+        <div class="top_right_btn">
+          <div class="wifi">
+            HELLO <span>WIFI</span> <img src="./images/wifi.png" />
+          </div>
+        </div>
+      </div>
+      <div class="admin_dashboard_wrapper">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="dashboard_left_sidebar">
+              <div class="save_button">
+                <!-- <a href="#"></a> -->
+                <button>SAVE SETTINGS</button>
+              </div>
+              <div class="sidebar_part">
+                <h2>Logo <i class="fas fa-chevron-down"></i></h2>
+                <div class="uploadOuter">
+                  <span class="dragBox">
+                    Drag and Drop your image here<br />or
+                    <span class="bro">BROWSE</span>
+                    <div class="size_note">(Max file size 1mb)</div>
+                    <div class="formate_file">Accepted Formats: PNG or JPG</div>
+                    <input
+                      type="file"
+                      onChange="dragNdrop(event)"
+                      ondragover="drag()"
+                      ondrop="drop()"
+                      id="uploadFile"
+                    />
+                  </span>
+                </div>
+                <div id="preview"></div>
+              </div>
+
+              <div class="sidebar_part">
+                <h2>Backround Image <i class="fas fa-chevron-down"></i></h2>
+                <div class="uploadOuter">
+                  <span class="dragBox">
+                    Drag and Drop your image here<br />or
+                    <span class="bro">BROWSE</span>
+                    <div class="size_note">(Max file size 1mb)</div>
+                    <div class="formate_file">Accepted Formats: PNG or JPG</div>
+                    <input
+                      type="file"
+                      onChange="dragNdrop(event)"
+                      ondragover="drag()"
+                      ondrop="drop()"
+                      id="uploadFile"
+                    />
+                  </span>
+                </div>
+                <div id="preview"></div>
+              </div>
+
+              <div class="sidebar_part">
+                <h2>Social Media Links <i class="fas fa-chevron-down"></i></h2>
+                <p>
+                  Choose to display your social media links<br />on the Success
+                  Screen page
+                </p>
+                <ul class="social_md">
+                  <li>
+                    <div class="social_media_link_wrap">
+                      <label class="switch">
+                        <input type="checkbox" checked />
+                        <span class="slider round"></span>
+                      </label>
+                      <img src="./images/twitter.png" />
+                      <input type="text" placeholder="twitter" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="social_media_link_wrap">
+                      <label class="switch">
+                        <input type="checkbox" checked />
+                        <span class="slider round"></span>
+                      </label>
+                      <img src="./images/instagram.png" />
+                      <input type="text" placeholder="instagram" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="social_media_link_wrap">
+                      <label class="switch">
+                        <input type="checkbox" checked />
+                        <span class="slider round"></span>
+                      </label>
+                      <img src="./images/facebook.png" />
+                      <input type="text" placeholder="facebook" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="social_media_link_wrap">
+                      <label class="switch">
+                        <input type="checkbox" checked />
+                        <span class="slider round"></span>
+                      </label>
+                      <img src="./images/world.png" />
+                      <input type="text" placeholder="world" />
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="sidebar_part">
+                <h2>Survey <i class="fas fa-chevron-down"></i></h2>
+                <p>
+                  Choose to have a survey filled<br />out before someone
+                  connects to WiFi
+                </p>
+                <div class="create_survey">
+                  <label class="switch">
+                    <input type="checkbox" checked />
+                    <span class="slider round"></span>
+                  </label>
+                  <button>CREATE SURVEY</button>
+                  <!-- <a href="#">CREATE SURVEY</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Preview-->
+          <div class="col-md-9 dashright">
+            <div
+              class="form-wrapper"
+              style="
+                margin-top: 140px;
+                background-image: url('./images/mobile.png');
+              "
+            >
+              <div class="form_inner">
+                <div class="wifi">
+                  HELLO <span>WIFI</span> <img src="./images/wifi.png" />
+                </div>
+                <h2>CONNECT TO FREE WIFI</h2>
+                <p style="margin-bottom: 20px">
+                  To connect to free WiFi. Please enter your information below:
+                </p>
+                <form>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="phone"
+                      placeholder="Phone _ _ _ - _ _ _ - _ _ _ _"
+                    />
+                    <!-- <input type="tel" class="form-control" id="email" placeholder="Phone"> -->
+                  </div>
+                  <div class="bycon">
+                    By connecting, you agree to the
+                    <a href="#">terms of service</a> and
+                    <a href="#">privacy policy</a>
+                  </div>
+                  <button class="submit" type="submit">CONNECT</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!--Preview-->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<div class="create_survey_popup_wrapper" style="display: none">
+  <div class="popup_inner">
+    <div class="header_popup">Create Survey</div>
+    <p class="selectQuestion">
+      Select which questions someone can choose for the survey:<br />
+    </p>
+    <p class="note_survey">
+      To edit an item's text, click the Edit icon or double-click the item.<br/>
+      Click the Check icon or press the "Enter" key to complete the modification.<br/>
+      To undo an edit, click the Undo icon or click anywhere outside the text box.<br/>
+    </p>
+    <div class="question_list">
+      <div class="question_item_container">
+        <p class="selectOption">
+          Select which options someone can choose for the question:<br />
+          <strong>Which of these are you interested in?</strong>
+        </p>
+        <ul class="popup_list">
+          <li>
+            <label class="switch">
+              <input type="checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+            <p>Our Loyalty Program</p>
+            <div class="cancel_remove"><i class="fas fa-times"></i></div>
+          </li>
+          <li>
+            <label class="switch">
+              <input type="checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+            <p>Happy Hour Specials</p>
+            <div class="cancel_remove"><i class="fas fa-times"></i></div>
+          </li>
+          <li>
+            <label class="switch">
+              <input type="checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+            <p>Private Events</p>
+            <div class="cancel_remove"><i class="fas fa-times"></i></div>
+          </li>
+          <li>
+            <label class="switch">
+              <input type="checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+            <p>Catering</p>
+            <div class="cancel_remove"><i class="fas fa-times"></i></div>
+          </li>
+          <li>
+            <label class="switch">
+              <input type="checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+            <input type="text" name="" class="option_name" />
+            <div class="cancel_remove">
+              <i class="fas fa-times"></i>
+            </div>
+          </li>
+        </ul>
+        <div class="addoption_btn">
+          <a href="#"><img src="./images/plus.png" /> Add Option</a>
+        </div>
+      </div>
+      <div class="question_item_container">
+        <p class="selectOption">
+          Select which options someone can choose for the question:<br />
+          <strong>Which of these are you interested in?</strong>
+        </p>
+        <ul class="popup_list">
+          <li>
+            <label class="switch">
+              <input type="checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+            <p>Our Loyalty Program</p>
+            <div class="cancel_remove"><i class="fas fa-times"></i></div>
+          </li>
+          <li>
+            <label class="switch">
+              <input type="checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+            <p>Happy Hour Specials</p>
+            <div class="cancel_remove"><i class="fas fa-times"></i></div>
+          </li>
+          <li>
+            <label class="switch">
+              <input type="checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+            <p>Private Events</p>
+            <div class="cancel_remove"><i class="fas fa-times"></i></div>
+          </li>
+          <li>
+            <label class="switch">
+              <input type="checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+            <p>Catering</p>
+            <div class="cancel_remove"><i class="fas fa-times"></i></div>
+          </li>
+          <li>
+            <label class="switch">
+              <input type="checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+            <input type="text" name="" class="option_name" />
+            <div class="cancel_remove">
+              <i class="fas fa-times"></i>
+            </div>
+          </li>
+        </ul>
+        <div class="addoption_btn">
+          <a href="#"><img src="./images/plus.png" /> Add Option</a>
+        </div>
+      </div>
+      <div class="question_item_container">
+        <p class="selectOption">
+          Select which options someone can choose for the question:<br />
+          <strong>Which of these are you interested in?</strong>
+        </p>
+        <ul class="popup_list">
+          <li>
+            <label class="switch">
+              <input type="checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+            <p>Our Loyalty Program</p>
+            <div class="cancel_remove"><i class="fas fa-times"></i></div>
+          </li>
+          <li>
+            <label class="switch">
+              <input type="checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+            <p>Happy Hour Specials</p>
+            <div class="cancel_remove"><i class="fas fa-times"></i></div>
+          </li>
+          <li>
+            <label class="switch">
+              <input type="checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+            <p>Private Events</p>
+            <div class="cancel_remove"><i class="fas fa-times"></i></div>
+          </li>
+          <li>
+            <label class="switch">
+              <input type="checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+            <p>Catering</p>
+            <div class="cancel_remove"><i class="fas fa-times"></i></div>
+          </li>
+          <li>
+            <label class="switch">
+              <input type="checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+            <input type="text" name="" class="option_name" />
+            <div class="cancel_remove">
+              <i class="fas fa-times"></i>
+            </div>
+          </li>
+        </ul>
+        <div class="addoption_btn">
+          <a href="#"><img src="./images/plus.png" /> Add Option</a>
+        </div>
+      </div>
+    </div>
+    <div class="addquestion_btn">
+      <img src="./images/plus.png" /> Add Question</a>
+    </div>
+    <div class="bottom_btn_wrapper">
+      <button class="close">CLOSE</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  "use strict";
+  function dragNdrop(event) {
+    var fileName = URL.createObjectURL(event.target.files[0]);
+    var preview = document.getElementById("preview");
+    var previewImg = document.createElement("img");
+    previewImg.setAttribute("src", fileName);
+    preview.innerHTML = "";
+    preview.appendChild(previewImg);
+  }
+  function drag() {
+    document.getElementById("uploadFile").parentNode.className =
+      "draging dragBox";
+  }
+  function drop() {
+    document.getElementById("uploadFile").parentNode.className = "dragBox";
+  }
+</script>
+
+<style>
+  @media (max-width: 992px) {
+    html,
+    body {
+      overflow: inherit !important;
+      overflow-x: hidden !important;
+      width: 100%;
+    }
+  }
+</style>
